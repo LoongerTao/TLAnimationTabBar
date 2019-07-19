@@ -34,7 +34,7 @@
 
 
 UIViewController *childViewController (NSString *title, NSString *imgName, NSUInteger tag) {
-    UIViewController *vc = [[UIViewController alloc] init];
+    ViewController *vc = [[ViewController alloc] init];
     vc.view.backgroundColor = [UIColor whiteColor];
     vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[UIImage imageNamed:imgName] tag:tag];
     
