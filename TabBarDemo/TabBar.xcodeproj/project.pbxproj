@@ -14,10 +14,10 @@
 		143BF42D22E0162C00753EF9 /* TabBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF42C22E0162C00753EF9 /* TabBarTests.m */; };
 		143BF43822E0162C00753EF9 /* TabBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF43722E0162C00753EF9 /* TabBarUITests.m */; };
 		143BF44722E0218200753EF9 /* TLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF44622E0218200753EF9 /* TLTabBarController.m */; };
-		14F0CA8522E16EB8006A0783 /* UITabBar+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA8422E16EB8006A0783 /* UITabBar+TLAnimation.m */; };
-		14F0CA8822E16F26006A0783 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA8722E16F26006A0783 /* UITabBarItem+TLAnimation.m */; };
-		14F0CA8C22E1727F006A0783 /* TLTabBarAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA8B22E1727F006A0783 /* TLTabBarAnimation.m */; };
 		14F0CA8E22E1B9E9006A0783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F0CA8D22E1B9E8006A0783 /* Assets.xcassets */; };
+		14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */; };
+		14F0CA9A22E1CC1B006A0783 /* UITabBar+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9422E1CC1B006A0783 /* UITabBar+TLAnimation.m */; };
+		14F0CA9B22E1CC1B006A0783 /* TLTabBarAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9822E1CC1B006A0783 /* TLTabBarAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,15 +54,15 @@
 		143BF43922E0162C00753EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		143BF44522E0218200753EF9 /* TLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTabBarController.h; sourceTree = "<group>"; };
 		143BF44622E0218200753EF9 /* TLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTabBarController.m; sourceTree = "<group>"; };
-		14F0CA8322E16EB8006A0783 /* UITabBar+TLAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+TLAnimation.h"; sourceTree = "<group>"; };
-		14F0CA8422E16EB8006A0783 /* UITabBar+TLAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+TLAnimation.m"; sourceTree = "<group>"; };
-		14F0CA8622E16F26006A0783 /* UITabBarItem+TLAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+TLAnimation.h"; sourceTree = "<group>"; };
-		14F0CA8722E16F26006A0783 /* UITabBarItem+TLAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+TLAnimation.m"; sourceTree = "<group>"; };
-		14F0CA8922E1708E006A0783 /* TLAnimationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAnimationProtocol.h; sourceTree = "<group>"; };
-		14F0CA8A22E1727F006A0783 /* TLTabBarAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTabBarAnimation.h; sourceTree = "<group>"; };
-		14F0CA8B22E1727F006A0783 /* TLTabBarAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTabBarAnimation.m; sourceTree = "<group>"; };
 		14F0CA8D22E1B9E8006A0783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		14F0CA8F22E1C748006A0783 /* TLAnimationTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLAnimationTabBar.h; sourceTree = "<group>"; };
+		14F0CA9122E1CC1B006A0783 /* TLAnimationTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLAnimationTabBar.h; sourceTree = "<group>"; };
+		14F0CA9222E1CC1B006A0783 /* TLAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLAnimationProtocol.h; sourceTree = "<group>"; };
+		14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+TLAnimation.m"; sourceTree = "<group>"; };
+		14F0CA9422E1CC1B006A0783 /* UITabBar+TLAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+TLAnimation.m"; sourceTree = "<group>"; };
+		14F0CA9522E1CC1B006A0783 /* TLTabBarAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTabBarAnimation.h; sourceTree = "<group>"; };
+		14F0CA9622E1CC1B006A0783 /* UITabBarItem+TLAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+TLAnimation.h"; sourceTree = "<group>"; };
+		14F0CA9722E1CC1B006A0783 /* UITabBar+TLAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+TLAnimation.h"; sourceTree = "<group>"; };
+		14F0CA9822E1CC1B006A0783 /* TLTabBarAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 		143BF40722E0162B00753EF9 = {
 			isa = PBXGroup;
 			children = (
-				14F0CA8222E16E58006A0783 /* TLAnimationTabBar */,
+				14F0CA9022E1CC1B006A0783 /* TLAnimationTabBar */,
 				143BF41222E0162B00753EF9 /* TabBar */,
 				14F0CA8D22E1B9E8006A0783 /* Assets.xcassets */,
 				143BF42B22E0162C00753EF9 /* TabBarTests */,
@@ -146,19 +146,20 @@
 			path = TabBarUITests;
 			sourceTree = "<group>";
 		};
-		14F0CA8222E16E58006A0783 /* TLAnimationTabBar */ = {
+		14F0CA9022E1CC1B006A0783 /* TLAnimationTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				14F0CA8322E16EB8006A0783 /* UITabBar+TLAnimation.h */,
-				14F0CA8422E16EB8006A0783 /* UITabBar+TLAnimation.m */,
-				14F0CA8622E16F26006A0783 /* UITabBarItem+TLAnimation.h */,
-				14F0CA8722E16F26006A0783 /* UITabBarItem+TLAnimation.m */,
-				14F0CA8922E1708E006A0783 /* TLAnimationProtocol.h */,
-				14F0CA8A22E1727F006A0783 /* TLTabBarAnimation.h */,
-				14F0CA8B22E1727F006A0783 /* TLTabBarAnimation.m */,
-				14F0CA8F22E1C748006A0783 /* TLAnimationTabBar.h */,
+				14F0CA9122E1CC1B006A0783 /* TLAnimationTabBar.h */,
+				14F0CA9222E1CC1B006A0783 /* TLAnimationProtocol.h */,
+				14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */,
+				14F0CA9422E1CC1B006A0783 /* UITabBar+TLAnimation.m */,
+				14F0CA9522E1CC1B006A0783 /* TLTabBarAnimation.h */,
+				14F0CA9622E1CC1B006A0783 /* UITabBarItem+TLAnimation.h */,
+				14F0CA9722E1CC1B006A0783 /* UITabBar+TLAnimation.h */,
+				14F0CA9822E1CC1B006A0783 /* TLTabBarAnimation.m */,
 			);
-			path = TLAnimationTabBar;
+			name = TLAnimationTabBar;
+			path = ../TLAnimationTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,11 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */,
 				143BF41822E0162B00753EF9 /* ViewController.m in Sources */,
-				14F0CA8522E16EB8006A0783 /* UITabBar+TLAnimation.m in Sources */,
+				14F0CA9A22E1CC1B006A0783 /* UITabBar+TLAnimation.m in Sources */,
 				143BF42322E0162C00753EF9 /* main.m in Sources */,
-				14F0CA8822E16F26006A0783 /* UITabBarItem+TLAnimation.m in Sources */,
-				14F0CA8C22E1727F006A0783 /* TLTabBarAnimation.m in Sources */,
+				14F0CA9B22E1CC1B006A0783 /* TLTabBarAnimation.m in Sources */,
 				143BF41522E0162B00753EF9 /* AppDelegate.m in Sources */,
 				143BF44722E0218200753EF9 /* TLTabBarController.m in Sources */,
 			);
