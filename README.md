@@ -14,7 +14,7 @@
 #### 3. 使用（支持Pod）
 - i. 按照正常流程`创建TabbarViewController的ChildViewController`及`对应的UITabBarItem`
 - ii. `给创建好的UITabBarItem`设置动画属性[`这一步是重点`]
-```Object-c
+```objc
 @implementation TLTabBarController
 
 - (void)viewDidLoad {
@@ -27,7 +27,7 @@
 [self addChildViewController:childViewController2(UITabBarSystemItemBookmarks, 2)];
 
 // 自定义图片和标题的item
-[self addChildViewController:childViewController(@"Drop", @"drop", 3)];
+[self addObjectChildViewController:childViewController(@"Drop", @"drop", 3)];
 [self addChildViewController:childViewController(@"Tools", @"Tools_00028", 4)];
 }
 
@@ -54,7 +54,7 @@ return vc;
 ```
 
 - iii. 动画的创建（`So easy!`）
-```Object-c
+```objc
 // 给UITabBarItem设置对应的动画
 void setAnimation(UITabBarItem *item, NSInteger index) {
 item.animation = @[
