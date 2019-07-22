@@ -12,14 +12,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/LoongerTao/TLAnimationTabBar.git', :tag => s.version }
   s.public_header_files = 'TLAnimationTabBar/TLAnimationTabBar.h'
   s.source_files = 'TLAnimationTabBar/TLAnimationTabBar.h'
-  
-  
-
-  s.subspec 'Config' do |cfg|
-      cfg.source_files = 'TLAnimationTabBar/*.{h,m}'
-      cfg.ios.frameworks = 'UIKit'
-  end
-
 end
 
 
