@@ -1,6 +1,5 @@
 # TLAnimationTabBar
 
-### 带有动画效果的TabBar：[TLAnimationTabBar](https://github.com/LoongerTao/TLAnimationTabBar) 
 ####  1. 特点
 - 模仿https://github.com/Ramotion/animated-tab-bar项目的动画效果
 - 使用简单、耦合小
@@ -9,7 +8,7 @@
 
 #### 2. 效果图如下
 
-![效果.gif](https://upload-images.jianshu.io/upload_images/3333500-166134560f01ccda.gif?imageMogr2/auto-orient/strip)
+![效果.gif](https://upload-images.jianshu.io/upload_images/3333500-3eb2e6e9aef759c6.gif?imageMogr2/auto-orient/strip)
 
 #### 3. pod支持
 ###### 1. 版本 
