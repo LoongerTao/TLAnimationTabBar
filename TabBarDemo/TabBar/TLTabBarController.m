@@ -18,8 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addChildViewController:childViewController2(UITabBarSystemItemDownloads, 0)];
-    [self addChildViewController:childViewController2(UITabBarSystemItemFavorites, 1)];
+//    [self addChildViewController:childViewController2(UITabBarSystemItemDownloads, 0)];
+//    [self addChildViewController:childViewController2(UITabBarSystemItemFavorites, 1)];
+    
+    [self addChildViewController:childViewController(@"Pin", @"icon_pin_00160", 0)];
+    [self addChildViewController:childViewController(@"User", @"user_00084", 1)];
     [self addChildViewController:childViewController2(UITabBarSystemItemBookmarks, 2)];
     [self addChildViewController:childViewController(@"Drop", @"drop", 3)];
     [self addChildViewController:childViewController(@"Tools", @"Tools_00028", 4)];

@@ -149,14 +149,14 @@
 		14F0CA9022E1CC1B006A0783 /* TLAnimationTabBar */ = {
 			isa = PBXGroup;
 			children = (
-				14F0CA9122E1CC1B006A0783 /* TLAnimationTabBar.h */,
 				14F0CA9222E1CC1B006A0783 /* TLAnimationProtocol.h */,
-				14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */,
-				14F0CA9422E1CC1B006A0783 /* UITabBar+TLAnimation.m */,
+				14F0CA9122E1CC1B006A0783 /* TLAnimationTabBar.h */,
 				14F0CA9522E1CC1B006A0783 /* TLTabBarAnimation.h */,
-				14F0CA9622E1CC1B006A0783 /* UITabBarItem+TLAnimation.h */,
-				14F0CA9722E1CC1B006A0783 /* UITabBar+TLAnimation.h */,
 				14F0CA9822E1CC1B006A0783 /* TLTabBarAnimation.m */,
+				14F0CA9722E1CC1B006A0783 /* UITabBar+TLAnimation.h */,
+				14F0CA9422E1CC1B006A0783 /* UITabBar+TLAnimation.m */,
+				14F0CA9622E1CC1B006A0783 /* UITabBarItem+TLAnimation.h */,
+				14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */,
 			);
 			name = TLAnimationTabBar;
 			path = ../TLAnimationTabBar;

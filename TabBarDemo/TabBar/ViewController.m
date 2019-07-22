@@ -18,7 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     CGFloat w = self.view.bounds.size.width;
-    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 300, w, 40)];
+    CGFloat y = self.view.bounds.size.height - 200;
+    _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, y, w, 40)];
     _titleLabel.textColor = [UIColor blackColor];
     _titleLabel.textAlignment = NSTextAlignmentCenter;
     _titleLabel.font = [UIFont systemFontOfSize:24];

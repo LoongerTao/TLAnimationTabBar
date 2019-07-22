@@ -31,7 +31,9 @@
             self.btns = @[];
             self.selectedIndex = 0;
         }
-        if ([subview isMemberOfClass:NSClassFromString(@"UITabBarButton")]) {
+        if ([subview isMemberOfClass:NSClassFromString(@"UITabBarButton")] ||   // 原生
+            [subview isMemberOfClass:NSClassFromString(@"UIButton")])           // 自定义Button
+        {
             NSMutableArray *temp = [NSMutableArray arrayWithArray:self.btns];
             [temp addObject:subview];
             self.btns = temp;
@@ -48,25 +50,30 @@
 /// UITabBarItem选中监听
 - (void)tl_setSelectedItem:(UITabBarItem *)selectedItem {
     NSUInteger index = [self.items indexOfObject:selectedItem];
-    NSUInteger sIdx = self.selectedIndex;
-    if (sIdx != index && self.btns.count > index) {
+    NSUInteger previousIndex = self.selectedIndex;
+    if (previousIndex != index && self.btns.count > index) {
         // 撤销选中动画
-        id deselectAnimation = self.items[sIdx].animation;
-        if (deselectAnimation) {
-            [deselectAnimation playDeselectAnimationWhitTabBarButton:self.btns[sIdx]
-                                                     buttonImageView:imageView(self.btns[sIdx])
-                                                     buttonTextLabel:textLabel(self.btns[sIdx])];
+        id <TLAnimationProtocol> deselectAnimation = self.items[previousIndex].animation;
+        SEL sel = @selector(playDeselectAnimationWhitTabBarButton:buttonImageView:buttonTextLabel:);
+        if (deselectAnimation && [deselectAnimation respondsToSelector:sel]) {
+            if ([deselectAnimation respondsToSelector:@selector(setToRight:)]) {
+                deselectAnimation.toRight = previousIndex < index;
+            }
+            [deselectAnimation playDeselectAnimationWhitTabBarButton:self.btns[previousIndex]
+                                                     buttonImageView:imageView(self.btns[previousIndex])
+                                                     buttonTextLabel:textLabel(self.btns[previousIndex])];
         }
         
         // 选中动画
-        id selectAnimation = self.items[index].animation;
+        id <TLAnimationProtocol> selectAnimation = self.items[index].animation;
         if (selectAnimation) {
+            if ([deselectAnimation respondsToSelector:@selector(setFromLeft:)]) {
+                deselectAnimation.fromLeft = previousIndex < index;
+            }
             [selectAnimation playSelectAnimationWhitTabBarButton:self.btns[index]
                                                  buttonImageView:imageView(self.btns[index])
                                                  buttonTextLabel:textLabel(self.btns[index])];
         }
-        
-        NSLog(@"selectAnimation: %@     deselectAnimation: %@",[selectAnimation class], [deselectAnimation class]);
         
         self.selectedIndex = index;
     }
@@ -95,6 +102,9 @@
 UILabel *textLabel(UIView *btn) {
     if ([btn isMemberOfClass:NSClassFromString(@"UITabBarButton")]) {
         return [btn valueForKeyPath:@"_label"];
+        
+    }else if([btn isKindOfClass:NSClassFromString(@"UIButton")]) {
+        return [(UIButton *)btn titleLabel];
     }
     return nil;
 }
@@ -102,6 +112,9 @@ UILabel *textLabel(UIView *btn) {
 UIImageView *imageView(UIView *btn) {
     if ([btn isMemberOfClass:NSClassFromString(@"UITabBarButton")]) {
         return [btn valueForKeyPath:@"_info"];
+        
+    }else if([btn isKindOfClass:NSClassFromString(@"UIButton")]) {
+        return [(UIButton *)btn imageView];
     }
     return nil;
 }
