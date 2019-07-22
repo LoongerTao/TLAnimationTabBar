@@ -3,7 +3,7 @@
 ### 带有动画效果的TabBar：[TLAnimationTabBar](https://github.com/LoongerTao/TLAnimationTabBar) 
 ####  1. 特点
 - 模仿https://github.com/Ramotion/animated-tab-bar项目的动画效果
-- 使用简单、无耦合
+- 使用简单、耦合小
 - 无需自定义控件，适配系统自带的UITabBarItem
 - 支持自定义动画拓展
 
