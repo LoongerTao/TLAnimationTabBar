@@ -114,14 +114,14 @@ return temp;
 pod 'TLAnimationTabBar', '~> 1.0.0'
 ```
 
-##### 2. CocoaPods获取不到最新的`TLTransitions`版本问题
+##### 2. CocoaPods获取不到最新的`TLAnimationTabBar`版本问题
 这可能是本地的CocoaPods仓库列表没有更新导致的。
 
 1. 运行以下命令更新本地的CocoaPods仓库列表：
 ``` pod repo update ```
 
 2. 然后通过以下命令查询
-``` pod search TLTransitions ```
+``` pod search TLAnimationTabBar ```
 
 3. 如果仍然查询不到最新版本，可以删除本地仓库重新安装
 ```sudo rm -rf ~/.cocoapods/repos/master pod setup```
