@@ -18,38 +18,38 @@
 @implementation TLTabBarController
 
 - (void)viewDidLoad {
-[super viewDidLoad]；
+    [super viewDidLoad]；
 
-// 创建TabbarViewController的ChildViewController
-// 系统自带的item
-[self addChildViewController:childViewController2(UITabBarSystemItemDownloads, 0)];
-[self addChildViewController:childViewController2(UITabBarSystemItemFavorites, 1)];
-[self addChildViewController:childViewController2(UITabBarSystemItemBookmarks, 2)];
+    // 创建TabbarViewController的ChildViewController
+    // 系统自带的item
+    [self addChildViewController:childViewController2(UITabBarSystemItemDownloads, 0)];
+    [self addChildViewController:childViewController2(UITabBarSystemItemFavorites, 1)];
+    [self addChildViewController:childViewController2(UITabBarSystemItemBookmarks, 2)];
 
-// 自定义图片和标题的item
-[self addObjectChildViewController:childViewController(@"Drop", @"drop", 3)];
-[self addChildViewController:childViewController(@"Tools", @"Tools_00028", 4)];
+    // 自定义图片和标题的item
+    [self addObjectChildViewController:childViewController(@"Drop", @"drop", 3)];
+    [self addChildViewController:childViewController(@"Tools", @"Tools_00028", 4)];
 }
 
 UIViewController *childViewController (NSString *title, NSString *imgName, NSUInteger tag) {
-ViewController *vc = [[ViewController alloc] init];
-vc.view.backgroundColor = [UIColor whiteColor];
-vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[UIImage imageNamed:imgName] tag:tag];
+    ViewController *vc = [[ViewController alloc] init];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[UIImage imageNamed:imgName] tag:tag];
 
-//  vc.tabBarItem设置动画属性（重点）
-setAnimation(vc.tabBarItem, tag);
-return vc;
+    //  vc.tabBarItem设置动画属性（重点）
+    setAnimation(vc.tabBarItem, tag);
+    return vc;
 }
 
 UIViewController *childViewController2 (UITabBarSystemItem systemItem, NSUInteger tag) {
-ViewController *vc = [[ViewController alloc] init];
-vc.view.backgroundColor = [UIColor whiteColor];
-vc.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:systemItem tag:tag];
+    ViewController *vc = [[ViewController alloc] init];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    vc.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:systemItem tag:tag];
 
-//  vc.tabBarItem设置动画属性（重点）
-setAnimation(vc.tabBarItem, tag);
+    //  vc.tabBarItem设置动画属性（重点）
+    setAnimation(vc.tabBarItem, tag);
 
-return vc;
+    return vc;
 }
 ```
 
@@ -57,54 +57,54 @@ return vc;
 ```objc
 // 给UITabBarItem设置对应的动画
 void setAnimation(UITabBarItem *item, NSInteger index) {
-item.animation = @[
-bounceAnimation(), rotationAnimation(), transitionAniamtion(),
-fumeAnimation(), frameAnimation()
-][index];
+    item.animation = @[
+    bounceAnimation(), rotationAnimation(), transitionAniamtion(),
+    fumeAnimation(), frameAnimation()
+    ][index];
 }
 
 // 以下都创建动画
 // 创建弹性动画
 TLBounceAnimation *bounceAnimation(){
-TLBounceAnimation *anm = [TLBounceAnimation new];
-return anm;
+    TLBounceAnimation *anm = [TLBounceAnimation new];
+    return anm;
 }
 
 // 创建旋转动画
 TLRotationAnimation *rotationAnimation(){
-TLRotationAnimation *anm = [TLRotationAnimation new];
-return anm;
+    TLRotationAnimation *anm = [TLRotationAnimation new];
+    return anm;
 }
 
 // 创建转场动画
 TLTransitionAniamtion *transitionAniamtion(){
-TLTransitionAniamtion *anm = [TLTransitionAniamtion new];
-anm.direction = 1; // 1~6，代表不同的动画方向
-anm.disableDeselectAnimation = NO; // 撤销选中是否禁播动画
-return anm;
+    TLTransitionAniamtion *anm = [TLTransitionAniamtion new];
+    anm.direction = 1; // 1~6，代表不同的动画方向
+    anm.disableDeselectAnimation = NO; // 撤销选中是否禁播动画
+    return anm;
 }
 
 // 创建模拟烟雾升起的动画
 TLFumeAnimation *fumeAnimation(){
-TLFumeAnimation *anm = [TLFumeAnimation new];
-return anm;
+    TLFumeAnimation *anm = [TLFumeAnimation new];
+    return anm;
 }
 
 // 创建图片贞动画
 TLFrameAnimation *frameAnimation(){
-TLFrameAnimation *anm = [TLFrameAnimation new];
-anm.images = imgs();
-return anm;
+    TLFrameAnimation *anm = [TLFrameAnimation new];
+    anm.images = imgs();
+    return anm;
 }
 
 NSArray *imgs (){
-NSMutableArray *temp = [NSMutableArray array];
-for (NSInteger i = 28 ; i <= 65; i++) {
-NSString *imgName = [NSString stringWithFormat:@"Tools_000%zi", i];
-CGImageRef img = [UIImage imageNamed:imgName].CGImage;
-[temp addObject:(__bridge id _Nonnull)(img)];
-}
-return temp;
+    NSMutableArray *temp = [NSMutableArray array];
+    for (NSInteger i = 28 ; i <= 65; i++) {
+        NSString *imgName = [NSString stringWithFormat:@"Tools_000%zi", i];
+        CGImageRef img = [UIImage imageNamed:imgName].CGImage;
+        [temp addObject:(__bridge id _Nonnull)(img)];
+    }
+    return temp;
 }
 ```
 
