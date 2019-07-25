@@ -15,6 +15,16 @@
 #define  kAnimationKeyPathPositionY @"position.y"
 #define  kAnimationKeyPathOpacity @"opacity"
 
+// MARK: - 功能函数
+/// 反转数组
+NSArray *reversedArray(NSArray *arr) {
+    NSMutableArray *temp = [NSMutableArray arrayWithCapacity:arr.count];
+    for (NSInteger i = arr.count-1; i >= 0; i--) {
+        [temp addObject:arr[i]];
+    }
+    return [temp copy];
+}
+
 /// 创建CAKeyframeAnimation动画
 CAKeyframeAnimation * createAnimation(NSString *keyPath, NSArray *values, CGFloat duration) {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:keyPath];
@@ -35,14 +45,85 @@ void playFrameAnimation(UIImageView *icon, NSArray <CIImage *>*images) {
     [icon.layer addAnimation:animation forKey:nil];
 }
 
-/// 反转数组
-NSArray *reversedArray(NSArray *arr) {
-    NSMutableArray *temp = [NSMutableArray arrayWithCapacity:arr.count];
-    for (NSInteger i = arr.count-1; i >= 0; i--) {
-        [temp addObject:arr[i]];
-    }
-    return [temp copy];
+/// 植入烟花动画，并播放
+void playFireworksAnimation(UIView *view, UIImage *img, CGFloat scale, CGFloat scaleRange) {
+    BOOL __block clipsToBounds = view.clipsToBounds;
+    view.clipsToBounds = NO;
+    
+    CGPoint center = CGPointMake(CGRectGetMidX(view.bounds), CGRectGetMidY(view.bounds));
+    
+    CAEmitterCell *explosionCell = [CAEmitterCell emitterCell];
+    explosionCell.name = @"explosion";
+    explosionCell.alphaRange = 0.20;
+    explosionCell.alphaSpeed = -1.0;
+    explosionCell.lifetime = 0.7;
+    explosionCell.lifetimeRange = 0.3;
+    explosionCell.birthRate = 0;
+    explosionCell.velocity = 40.00;
+    explosionCell.velocityRange = 10.00;
+    explosionCell.contents = (id)[img CGImage];
+    explosionCell.scale = scale;
+    explosionCell.scaleRange = scaleRange;
+    
+    CAEmitterLayer __block *explosionLayer = [CAEmitterLayer layer];
+    explosionLayer.name = @"emitterLayer";
+    explosionLayer.emitterShape = kCAEmitterLayerCircle;
+    explosionLayer.emitterMode = kCAEmitterLayerOutline;
+    explosionLayer.emitterSize = CGSizeMake(25, 0);
+    explosionLayer.emitterCells = @[explosionCell];
+    explosionLayer.renderMode = kCAEmitterLayerOldestFirst;
+    explosionLayer.masksToBounds = NO;
+    explosionLayer.seed = 1366128504;
+    explosionLayer.emitterPosition = center;
+    [view.layer addSublayer:explosionLayer];
+    
+    CAEmitterCell *chargeCell = [CAEmitterCell emitterCell];
+    chargeCell.name = @"charge";
+    chargeCell.alphaRange = 0.20;
+    chargeCell.alphaSpeed = -1.0;
+    chargeCell.lifetime = 0.3;
+    chargeCell.lifetimeRange = 0.1;
+    chargeCell.birthRate = 0;
+    chargeCell.velocity = -40.0;
+    chargeCell.velocityRange = 0.00;
+    chargeCell.contents = (id)[img CGImage];
+    chargeCell.scale = scale;
+    chargeCell.scaleRange = scaleRange;
+    
+    CAEmitterLayer __block *chargeLayer = [CAEmitterLayer layer];
+    chargeLayer.name = @"emitterLayer";
+    chargeLayer.emitterShape = kCAEmitterLayerCircle;
+    chargeLayer.emitterMode = kCAEmitterLayerOutline;
+    chargeLayer.emitterSize = CGSizeMake(25, 0);
+    chargeLayer.emitterCells = @[chargeCell];
+    chargeLayer.renderMode = kCAEmitterLayerOldestFirst;
+    chargeLayer.masksToBounds = NO;
+    chargeLayer.seed = 1366128504;
+    chargeLayer.emitterPosition = center;
+    [view.layer addSublayer:chargeLayer];
+    
+    chargeLayer.beginTime = CACurrentMediaTime();
+    [chargeLayer setValue:@100 forKeyPath:@"emitterCells.charge.birthRate"];
+    
+    NSTimeInterval time = kDuration * NSEC_PER_SEC;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, time), dispatch_get_main_queue(), ^{
+        [chargeLayer setValue:@0 forKeyPath:@"emitterCells.charge.birthRate"];
+        [chargeLayer removeFromSuperlayer];
+        
+        explosionLayer.beginTime = CACurrentMediaTime();
+        [explosionLayer setValue:@300 forKeyPath:@"emitterCells.explosion.birthRate"];
+
+        NSTimeInterval time = 0.3 * NSEC_PER_SEC;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, time), dispatch_get_main_queue(), ^{
+            [explosionLayer setValue:@0 forKeyPath:@"emitterCells.explosion.birthRate"];
+            [explosionLayer removeFromSuperlayer];
+            view.clipsToBounds = clipsToBounds;
+        });
+    });
 }
+
+
+
 
 
 // MARK: - TLBounceAnimation 弹性动画
@@ -54,6 +135,11 @@ NSArray *reversedArray(NSArray *arr) {
 {
     CAKeyframeAnimation *bounceAnimation = createAnimation(kAnimationKeyPathScale, @[@1.0, @0.85, @1.15, @0.95, @1.02, @1.0], kDuration);
     [imageView.layer addAnimation:bounceAnimation forKey:nil];
+    
+    if(_isPlayFireworksAnimation) {
+        UIImage *img = [UIImage imageNamed:@"yanhua"];
+        playFireworksAnimation(imageView, img, 0.08, 0.03);
+    }
 }
 
 
@@ -161,6 +247,10 @@ void playDeselectLabelAnimation(UILabel *textLabel) {
 {
     if (self.images.count > 0) {
         playFrameAnimation(imageView, self.images);
+        if(_isPlayFireworksAnimation) {
+            UIImage *img = [UIImage imageNamed:@"yanhua"];
+            playFireworksAnimation(imageView, img, 0.08, 0.03);
+        }
     }
 }
 

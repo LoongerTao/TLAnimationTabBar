@@ -65,6 +65,7 @@ void setAnimation(UITabBarItem *item, NSInteger index) {
 
 TLBounceAnimation *bounceAnimation(){
     TLBounceAnimation *anm = [TLBounceAnimation new];
+    anm.isPlayFireworksAnimation = YES;
     return anm;
 }
 
@@ -88,6 +89,7 @@ TLFumeAnimation *fumeAnimation(){
 TLFrameAnimation *frameAnimation(){
     TLFrameAnimation *anm = [TLFrameAnimation new];
     anm.images = imgs();
+    anm.isPlayFireworksAnimation = YES;
     return anm;
 }
 

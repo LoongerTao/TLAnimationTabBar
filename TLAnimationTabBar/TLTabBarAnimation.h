@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 弹性动画 */
 @interface TLBounceAnimation : NSObject <TLAnimationProtocol>
+@property(nonatomic, assign) BOOL isPlayFireworksAnimation; /// 是否需要播放烟花效果，默认NO
 @end
 
 /** 仿烟动画 */
@@ -26,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 /** 贞动画 */
 @interface TLFrameAnimation : NSObject <TLAnimationProtocol>
 @property(nonatomic, strong) NSArray <CIImage *>*images;
+@property(nonatomic, assign) BOOL isPlayFireworksAnimation; /// 是否需要播放烟花效果，默认NO
+
 @end
 
 
