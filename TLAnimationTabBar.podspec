@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source       = { :git => 'https://github.com/LoongerTao/TLAnimationTabBar.git', :tag => s.version }
   s.public_header_files = 'TLAnimationTabBar/TLAnimationTabBar.h'
-  s.source_files = 'TLAnimationTabBar/TLAnimationTabBar.h'
+  s.source_files = 'TLAnimationTabBar/*.{h,m}'
 end
 
 
