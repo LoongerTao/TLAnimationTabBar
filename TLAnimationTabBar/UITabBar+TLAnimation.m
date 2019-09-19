@@ -101,6 +101,14 @@
 // MARK: - Functions
 UILabel *textLabel(UIView *btn) {
     if ([btn isMemberOfClass:NSClassFromString(@"UITabBarButton")]) {
+        if (@available(iOS 13.0, *)) {
+            for (UIView *subView in btn.subviews) {
+                if ([subView isKindOfClass:NSClassFromString(@"UITabBarButtonLabel")]) {
+                    return (UILabel *)subView;
+                }
+            }
+            return nil;
+        }
         return [btn valueForKeyPath:@"_label"];
         
     }else if([btn isKindOfClass:NSClassFromString(@"UIButton")]) {
@@ -111,12 +119,20 @@ UILabel *textLabel(UIView *btn) {
 
 UIImageView *imageView(UIView *btn) {
     if ([btn isMemberOfClass:NSClassFromString(@"UITabBarButton")]) {
+        if (@available(iOS 13.0, *)) {
+            for (UIView *subView in btn.subviews) {
+                if ([subView isKindOfClass:NSClassFromString(@"UITabBarSwappableImageView")]) {
+                    return (UIImageView *)subView;
+                }
+            }
+            return nil;
+        }
         return [btn valueForKeyPath:@"_info"];
-        
+
     }else if([btn isKindOfClass:NSClassFromString(@"UIButton")]) {
         return [(UIButton *)btn imageView];
     }
-    return nil;
+    return nil; 
 }
 
 @end
