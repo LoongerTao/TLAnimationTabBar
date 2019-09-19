@@ -13,7 +13,7 @@
 #### 3. pod支持
 ###### 1. 版本 
 ```
-pod 'TLAnimationTabBar', '~> 1.0.0'
+pod 'TLAnimationTabBar', '~> 1.0.3'
 ```
 
 ###### 2. CocoaPods获取不到最新的`TLAnimationTabBar`版本问题
