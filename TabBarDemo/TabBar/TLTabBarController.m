@@ -103,6 +103,11 @@ NSArray *imgs (){
     return temp;
 }
 
+// MARK: - UITabBarItemDelegate
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    // TabBarItem被点击时会被调用
+    NSLog(@"%s",__func__);
+}
 @end
 
 
