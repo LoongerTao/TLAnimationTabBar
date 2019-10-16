@@ -15,6 +15,8 @@
 		143BF42D22E0162C00753EF9 /* TabBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF42C22E0162C00753EF9 /* TabBarTests.m */; };
 		143BF43822E0162C00753EF9 /* TabBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF43722E0162C00753EF9 /* TabBarUITests.m */; };
 		143BF44722E0218200753EF9 /* TLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF44622E0218200753EF9 /* TLTabBarController.m */; };
+		149F99BC2356BE7600E719B2 /* NewFeaturesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F99BB2356BE7600E719B2 /* NewFeaturesController.m */; };
+		149F99C12356E8B900E719B2 /* TLScreenshotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F99BF2356E8B900E719B2 /* TLScreenshotController.m */; };
 		14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */; };
 		14F0CA9A22E1CC1B006A0783 /* UITabBar+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9422E1CC1B006A0783 /* UITabBar+TLAnimation.m */; };
 		14F0CA9B22E1CC1B006A0783 /* TLTabBarAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9822E1CC1B006A0783 /* TLTabBarAnimation.m */; };
@@ -55,6 +57,10 @@
 		143BF43922E0162C00753EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		143BF44522E0218200753EF9 /* TLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTabBarController.h; sourceTree = "<group>"; };
 		143BF44622E0218200753EF9 /* TLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTabBarController.m; sourceTree = "<group>"; };
+		149F99BA2356BE7600E719B2 /* NewFeaturesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewFeaturesController.h; sourceTree = "<group>"; };
+		149F99BB2356BE7600E719B2 /* NewFeaturesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewFeaturesController.m; sourceTree = "<group>"; };
+		149F99BE2356E8B900E719B2 /* TLScreenshotController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLScreenshotController.h; sourceTree = "<group>"; };
+		149F99BF2356E8B900E719B2 /* TLScreenshotController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLScreenshotController.m; sourceTree = "<group>"; };
 		14F0CA9122E1CC1B006A0783 /* TLAnimationTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLAnimationTabBar.h; sourceTree = "<group>"; };
 		14F0CA9222E1CC1B006A0783 /* TLAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLAnimationProtocol.h; sourceTree = "<group>"; };
 		14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+TLAnimation.m"; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 		143BF41222E0162B00753EF9 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				149F99B92356BDA600E719B2 /* iOS13 New Features */,
 				143BF41322E0162B00753EF9 /* AppDelegate.h */,
 				143BF41422E0162B00753EF9 /* AppDelegate.m */,
 				143BF41622E0162B00753EF9 /* ViewController.h */,
@@ -144,6 +151,25 @@
 				143BF43922E0162C00753EF9 /* Info.plist */,
 			);
 			path = TabBarUITests;
+			sourceTree = "<group>";
+		};
+		149F99B92356BDA600E719B2 /* iOS13 New Features */ = {
+			isa = PBXGroup;
+			children = (
+				149F99BD2356E83B00E719B2 /* Screenshot */,
+				149F99BA2356BE7600E719B2 /* NewFeaturesController.h */,
+				149F99BB2356BE7600E719B2 /* NewFeaturesController.m */,
+			);
+			path = "iOS13 New Features";
+			sourceTree = "<group>";
+		};
+		149F99BD2356E83B00E719B2 /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				149F99BE2356E8B900E719B2 /* TLScreenshotController.h */,
+				149F99BF2356E8B900E719B2 /* TLScreenshotController.m */,
+			);
+			path = Screenshot;
 			sourceTree = "<group>";
 		};
 		14F0CA9022E1CC1B006A0783 /* TLAnimationTabBar */ = {
@@ -224,6 +250,7 @@
 		143BF40822E0162B00753EF9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TL;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "故乡的云";
 				TargetAttributes = {
@@ -293,11 +320,13 @@
 			files = (
 				14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */,
 				143BF41822E0162B00753EF9 /* ViewController.m in Sources */,
+				149F99C12356E8B900E719B2 /* TLScreenshotController.m in Sources */,
 				14F0CA9A22E1CC1B006A0783 /* UITabBar+TLAnimation.m in Sources */,
 				143BF42322E0162C00753EF9 /* main.m in Sources */,
 				14F0CA9B22E1CC1B006A0783 /* TLTabBarAnimation.m in Sources */,
 				143BF41522E0162B00753EF9 /* AppDelegate.m in Sources */,
 				143BF44722E0218200753EF9 /* TLTabBarController.m in Sources */,
+				149F99BC2356BE7600E719B2 /* NewFeaturesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -448,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -463,7 +492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DA3ZJPDSKE;
 				INFOPLIST_FILE = TabBar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,7 +510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DA3ZJPDSKE;
 				INFOPLIST_FILE = TabBar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

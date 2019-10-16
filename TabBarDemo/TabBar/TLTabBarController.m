@@ -35,7 +35,8 @@
     }
 }
 
-
+// MARK: - UITabBarItem创建函数
+/// 自定义样式UITabBarItem
 UIViewController *childViewController (NSString *title, NSString *imgName, NSUInteger tag) {
     ViewController *vc = [[ViewController alloc] init];
     vc.view.backgroundColor = [UIColor whiteColor];
@@ -45,6 +46,7 @@ UIViewController *childViewController (NSString *title, NSString *imgName, NSUIn
     return vc;
 }
 
+/// 系统样式UITabBarItem
 UIViewController *childViewController2 (UITabBarSystemItem systemItem, NSUInteger tag) {
     ViewController *vc = [[ViewController alloc] init];
     vc.view.backgroundColor = [UIColor whiteColor];
@@ -55,7 +57,8 @@ UIViewController *childViewController2 (UITabBarSystemItem systemItem, NSUIntege
     return vc;
 }
 
-
+// MARK: - 给UITabBarItem绑定动画
+/// 给UITabBarItem绑定动画
 void setAnimation(UITabBarItem *item, NSInteger index) {
      item.animation = @[
                        bounceAnimation(), rotationAnimation(), transitionAniamtion(),
@@ -63,6 +66,8 @@ void setAnimation(UITabBarItem *item, NSInteger index) {
                        ][index];
 }
 
+
+// MARK: - 创建动画函数
 TLBounceAnimation *bounceAnimation(){
     TLBounceAnimation *anm = [TLBounceAnimation new];
     anm.isPlayFireworksAnimation = YES;
@@ -103,7 +108,7 @@ NSArray *imgs (){
     return temp;
 }
 
-// MARK: - UITabBarItemDelegate
+// MARK: - UITabBarItemDelegate 监听TabBarItem点击事件
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     // TabBarItem被点击时会被调用
     NSLog(@"%s",__func__);
