@@ -8,6 +8,9 @@
 
 #import "NewFeaturesController.h"
 #import "TLScreenshotController.h"
+#import "SFSymbolController.h"
+#import "TLMenusController.h"
+
 
 @interface NewFeaturesController ()
 @property(nonatomic, strong) NSArray *items;
@@ -25,18 +28,22 @@
   
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemClose target:self action:@selector(back)];
     
-    
+
     self.items = @[
         @{
             @"title": @"系统截图时将页面生成PDF(截长图)",
             @"cls": [TLScreenshotController class]
         },
+        @{
+            @"title": @"SF Symbol 简单应用",
+            @"cls": [SFSymbolController class]
+        },
+        @{
+            @"title": @"Menus",
+            @"cls": [TLMenusController class]
+        },
 //        @{
 //            @"title": @"UITabBarAppearance",
-//            @"cls": [UIViewController class]
-//        },
-//        @{
-//            @"title": @"UIMenu",
 //            @"cls": [UIViewController class]
 //        },
     ];

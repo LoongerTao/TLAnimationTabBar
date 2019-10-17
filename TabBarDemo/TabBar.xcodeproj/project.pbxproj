@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1431D51B22E94E07008A7FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1431D51A22E94E07008A7FBE /* Assets.xcassets */; };
+		1439EA872357FE0D0030470A /* TLCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439EA852357FE0D0030470A /* TLCollectionCell.m */; };
+		1439EA882357FE0D0030470A /* TLCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1439EA862357FE0D0030470A /* TLCollectionCell.xib */; };
+		1439EA8C235803280030470A /* SFSymbolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439EA8A235803280030470A /* SFSymbolController.m */; };
+		1439EA8D235803280030470A /* SFSymbolController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1439EA8B235803280030470A /* SFSymbolController.xib */; };
+		1439EA91235853EC0030470A /* TLMenusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439EA90235853EC0030470A /* TLMenusController.m */; };
+		1439EA93235887540030470A /* TLMenusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1439EA92235887540030470A /* TLMenusController.xib */; };
+		1439EA96235891300030470A /* TLMenusTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439EA95235891300030470A /* TLMenusTestController.m */; };
 		143BF41522E0162B00753EF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF41422E0162B00753EF9 /* AppDelegate.m */; };
 		143BF41822E0162B00753EF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF41722E0162B00753EF9 /* ViewController.m */; };
 		143BF42022E0162C00753EF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143BF41E22E0162C00753EF9 /* LaunchScreen.storyboard */; };
@@ -41,6 +48,17 @@
 
 /* Begin PBXFileReference section */
 		1431D51A22E94E07008A7FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1439EA842357FE0D0030470A /* TLCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCollectionCell.h; sourceTree = "<group>"; };
+		1439EA852357FE0D0030470A /* TLCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCollectionCell.m; sourceTree = "<group>"; };
+		1439EA862357FE0D0030470A /* TLCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TLCollectionCell.xib; sourceTree = "<group>"; };
+		1439EA89235803280030470A /* SFSymbolController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFSymbolController.h; sourceTree = "<group>"; };
+		1439EA8A235803280030470A /* SFSymbolController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFSymbolController.m; sourceTree = "<group>"; };
+		1439EA8B235803280030470A /* SFSymbolController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SFSymbolController.xib; sourceTree = "<group>"; };
+		1439EA8F235853EC0030470A /* TLMenusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLMenusController.h; sourceTree = "<group>"; };
+		1439EA90235853EC0030470A /* TLMenusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLMenusController.m; sourceTree = "<group>"; };
+		1439EA92235887540030470A /* TLMenusController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TLMenusController.xib; sourceTree = "<group>"; };
+		1439EA94235891300030470A /* TLMenusTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLMenusTestController.h; sourceTree = "<group>"; };
+		1439EA95235891300030470A /* TLMenusTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLMenusTestController.m; sourceTree = "<group>"; };
 		143BF41022E0162B00753EF9 /* TabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		143BF41322E0162B00753EF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		143BF41422E0162B00753EF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +114,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1439EA782357F6020030470A /* SF Symbol */ = {
+			isa = PBXGroup;
+			children = (
+				1439EA89235803280030470A /* SFSymbolController.h */,
+				1439EA8A235803280030470A /* SFSymbolController.m */,
+				1439EA8B235803280030470A /* SFSymbolController.xib */,
+			);
+			path = "SF Symbol";
+			sourceTree = "<group>";
+		};
+		1439EA832357FDC50030470A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1439EA842357FE0D0030470A /* TLCollectionCell.h */,
+				1439EA852357FE0D0030470A /* TLCollectionCell.m */,
+				1439EA862357FE0D0030470A /* TLCollectionCell.xib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1439EA8E235845D00030470A /* UIMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1439EA8F235853EC0030470A /* TLMenusController.h */,
+				1439EA90235853EC0030470A /* TLMenusController.m */,
+				1439EA94235891300030470A /* TLMenusTestController.h */,
+				1439EA95235891300030470A /* TLMenusTestController.m */,
+				1439EA92235887540030470A /* TLMenusController.xib */,
+			);
+			path = UIMenu;
+			sourceTree = "<group>";
+		};
 		143BF40722E0162B00753EF9 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +206,9 @@
 		149F99B92356BDA600E719B2 /* iOS13 New Features */ = {
 			isa = PBXGroup;
 			children = (
+				1439EA8E235845D00030470A /* UIMenu */,
+				1439EA832357FDC50030470A /* Common */,
+				1439EA782357F6020030470A /* SF Symbol */,
 				149F99BD2356E83B00E719B2 /* Screenshot */,
 				149F99BA2356BE7600E719B2 /* NewFeaturesController.h */,
 				149F99BB2356BE7600E719B2 /* NewFeaturesController.m */,
@@ -292,8 +345,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1439EA882357FE0D0030470A /* TLCollectionCell.xib in Resources */,
 				1431D51B22E94E07008A7FBE /* Assets.xcassets in Resources */,
+				1439EA8D235803280030470A /* SFSymbolController.xib in Resources */,
 				143BF42022E0162C00753EF9 /* LaunchScreen.storyboard in Resources */,
+				1439EA93235887540030470A /* TLMenusController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +376,13 @@
 			files = (
 				14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */,
 				143BF41822E0162B00753EF9 /* ViewController.m in Sources */,
+				1439EA91235853EC0030470A /* TLMenusController.m in Sources */,
+				1439EA872357FE0D0030470A /* TLCollectionCell.m in Sources */,
 				149F99C12356E8B900E719B2 /* TLScreenshotController.m in Sources */,
 				14F0CA9A22E1CC1B006A0783 /* UITabBar+TLAnimation.m in Sources */,
 				143BF42322E0162C00753EF9 /* main.m in Sources */,
+				1439EA96235891300030470A /* TLMenusTestController.m in Sources */,
+				1439EA8C235803280030470A /* SFSymbolController.m in Sources */,
 				14F0CA9B22E1CC1B006A0783 /* TLTabBarAnimation.m in Sources */,
 				143BF41522E0162B00753EF9 /* AppDelegate.m in Sources */,
 				143BF44722E0218200753EF9 /* TLTabBarController.m in Sources */,
