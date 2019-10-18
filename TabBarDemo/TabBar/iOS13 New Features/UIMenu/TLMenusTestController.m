@@ -7,9 +7,15 @@
 //
 
 #import "TLMenusTestController.h"
+#import "TLCollectionCell.h"
+#import "TLLineLayout.h"
 
 
-@interface TLMenusTestController ()<UITableViewDelegate,UITableViewDataSource>
+
+@interface TLMenusTestController ()<
+UITableViewDelegate,UITableViewDataSource,
+UICollectionViewDelegate, UICollectionViewDataSource
+>
 
 @property(nonatomic, weak) UITableView *tableView;
 @property(nonatomic, weak) UICollectionView *collectionView;
@@ -23,13 +29,16 @@
     [super viewDidLoad];
 
     self.items = @[
-        @"airplayaudio",@"arkit",@"airplayvideo",@"icloud",@"螺栓水平云",
-        @"感叹号",@"脸型",@"icloud和箭头",@"实时摄影",@"笔尖裁剪圆",@"苹果浏览器"
+        @"airplayaudio",@"arkit",@"airplayvideo",@"icloud",@"livephoto.play",
+        @"wind",@"snow",@"tornado",@"share",@"book",@"safari"
     ];
     self.view.backgroundColor = [UIColor systemBackgroundColor];
     self.tableView.tableFooterView = [UIView new];
+    
+    [self.collectionView registerClass:[TLCollectionCell class] forCellWithReuseIdentifier:@"collectionCell"];
 }
 
+// MARK: - lazy
 - (UITableView *)tableView {
     if (_tableView == nil) {
         CGRect frame = self.view.layoutMarginsGuide.layoutFrame;
@@ -45,9 +54,29 @@
     return  _tableView;
 }
 
-// MARK: - table view data source & delegate
+- (UICollectionView *)collectionView {
+    if (_collectionView == nil) {
+        TLLineLayout *layout = [[TLLineLayout alloc] init];
+        
+        CGRect tbFrame = self.tableView.frame;
+        CGRect frame = CGRectOffset(tbFrame, 0, CGRectGetHeight(tbFrame));
+        frame.size.height = 200;
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:layout];
+        _collectionView = collectionView;
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.backgroundColor = [UIColor systemBackgroundColor];
+        _collectionView.showsHorizontalScrollIndicator = NO;
+        [self.view addSubview:collectionView];
+    }
+    
+    return _collectionView;
+}
+
+
+// MARK: - Table view data source & delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -70,7 +99,6 @@
     return [self contextMenuConfiguration];
 }
 
-
 - (nullable UITargetedPreview *)tableView:(UITableView *)tableView previewForHighlightingContextMenuWithConfiguration:(UIContextMenuConfiguration *)configuration
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:self.indexPath];
@@ -80,7 +108,59 @@
     return [[UITargetedPreview alloc] initWithView:cell];
 }
 
+- (nullable UITargetedPreview *)tableView:(UITableView *)tableView previewForDismissingContextMenuWithConfiguration:(UIContextMenuConfiguration *)configuration
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:self.indexPath];   
+    return [[UITargetedPreview alloc] initWithView:cell.imageView];
+}
 
+// MARK: - Collection view data source and delegate
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 6;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    TLCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionCell" forIndexPath:indexPath];
+    NSString *name = [NSString stringWithFormat:@"%zi", indexPath.row % 6 + 1];
+    cell.imageView.image = [UIImage imageNamed:name];
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *name = [NSString stringWithFormat:@"%zi", indexPath.row % 6 + 1];
+    CGSize size = [UIImage imageNamed:name].size;
+    return CGSizeMake(size.width * 0.35, size.height * 0.35);
+}
+
+- (nullable UIContextMenuConfiguration *)collectionView:(UICollectionView *)collectionView contextMenuConfigurationForItemAtIndexPath:(NSIndexPath *)indexPath point:(CGPoint)point
+{
+    self.indexPath = indexPath;
+    return [self contextMenuConfiguration];
+}
+
+
+- (nullable UITargetedPreview *)collectionView:(UICollectionView *)collectionView previewForHighlightingContextMenuWithConfiguration:(UIContextMenuConfiguration *)configuration {
+    TLCollectionCell *cell = (TLCollectionCell *)[collectionView cellForItemAtIndexPath:self.indexPath];
+    if (cell == nil) {
+        return nil;
+    }
+    if (self.indexPath.row < 2) {
+        return [[UITargetedPreview alloc] initWithView:cell.imageView];
+    }
+    return [[UITargetedPreview alloc] initWithView:cell];
+}
+
+- (nullable UITargetedPreview *)collectionView:(UICollectionView *)collectionView previewForDismissingContextMenuWithConfiguration:(UIContextMenuConfiguration *)configuration {
+    
+    TLCollectionCell *cell = (TLCollectionCell *)[collectionView cellForItemAtIndexPath:self.indexPath];
+   
+    return [[UITargetedPreview alloc] initWithView:cell.imageView];
+}
+
+
+//- (void)collectionView:(UICollectionView *)collectionView willPerformPreviewActionForMenuWithConfiguration:(UIContextMenuConfiguration *)configuration animator:(id<UIContextMenuInteractionCommitAnimating>)animator
+
+// MARK: - Other method
 - (UIContextMenuConfiguration *)contextMenuConfiguration{
     // 菜单栏提供者
     UIContextMenuActionProvider actionProvider = ^UIMenu * _Nullable(NSArray<UIMenuElement *> * _Nonnull suggestedActions) {
@@ -132,3 +212,6 @@
                                                     actionProvider:actionProvider];
 }
 @end
+
+
+

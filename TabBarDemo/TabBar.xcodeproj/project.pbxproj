@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1431D51B22E94E07008A7FBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1431D51A22E94E07008A7FBE /* Assets.xcassets */; };
 		1439EA872357FE0D0030470A /* TLCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439EA852357FE0D0030470A /* TLCollectionCell.m */; };
-		1439EA882357FE0D0030470A /* TLCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1439EA862357FE0D0030470A /* TLCollectionCell.xib */; };
 		1439EA8C235803280030470A /* SFSymbolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439EA8A235803280030470A /* SFSymbolController.m */; };
 		1439EA8D235803280030470A /* SFSymbolController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1439EA8B235803280030470A /* SFSymbolController.xib */; };
 		1439EA91235853EC0030470A /* TLMenusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439EA90235853EC0030470A /* TLMenusController.m */; };
@@ -22,6 +21,7 @@
 		143BF42D22E0162C00753EF9 /* TabBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF42C22E0162C00753EF9 /* TabBarTests.m */; };
 		143BF43822E0162C00753EF9 /* TabBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF43722E0162C00753EF9 /* TabBarUITests.m */; };
 		143BF44722E0218200753EF9 /* TLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF44622E0218200753EF9 /* TLTabBarController.m */; };
+		145EC502235960DD002A2217 /* TLLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 145EC501235960DD002A2217 /* TLLineLayout.m */; };
 		149F99BC2356BE7600E719B2 /* NewFeaturesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F99BB2356BE7600E719B2 /* NewFeaturesController.m */; };
 		149F99C12356E8B900E719B2 /* TLScreenshotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F99BF2356E8B900E719B2 /* TLScreenshotController.m */; };
 		14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */; };
@@ -50,7 +50,6 @@
 		1431D51A22E94E07008A7FBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1439EA842357FE0D0030470A /* TLCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLCollectionCell.h; sourceTree = "<group>"; };
 		1439EA852357FE0D0030470A /* TLCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLCollectionCell.m; sourceTree = "<group>"; };
-		1439EA862357FE0D0030470A /* TLCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TLCollectionCell.xib; sourceTree = "<group>"; };
 		1439EA89235803280030470A /* SFSymbolController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFSymbolController.h; sourceTree = "<group>"; };
 		1439EA8A235803280030470A /* SFSymbolController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFSymbolController.m; sourceTree = "<group>"; };
 		1439EA8B235803280030470A /* SFSymbolController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SFSymbolController.xib; sourceTree = "<group>"; };
@@ -75,6 +74,8 @@
 		143BF43922E0162C00753EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		143BF44522E0218200753EF9 /* TLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTabBarController.h; sourceTree = "<group>"; };
 		143BF44622E0218200753EF9 /* TLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTabBarController.m; sourceTree = "<group>"; };
+		145EC500235960DD002A2217 /* TLLineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLLineLayout.h; sourceTree = "<group>"; };
+		145EC501235960DD002A2217 /* TLLineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLLineLayout.m; sourceTree = "<group>"; };
 		149F99BA2356BE7600E719B2 /* NewFeaturesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewFeaturesController.h; sourceTree = "<group>"; };
 		149F99BB2356BE7600E719B2 /* NewFeaturesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewFeaturesController.m; sourceTree = "<group>"; };
 		149F99BE2356E8B900E719B2 /* TLScreenshotController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLScreenshotController.h; sourceTree = "<group>"; };
@@ -129,7 +130,6 @@
 			children = (
 				1439EA842357FE0D0030470A /* TLCollectionCell.h */,
 				1439EA852357FE0D0030470A /* TLCollectionCell.m */,
-				1439EA862357FE0D0030470A /* TLCollectionCell.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -139,9 +139,11 @@
 			children = (
 				1439EA8F235853EC0030470A /* TLMenusController.h */,
 				1439EA90235853EC0030470A /* TLMenusController.m */,
+				1439EA92235887540030470A /* TLMenusController.xib */,
 				1439EA94235891300030470A /* TLMenusTestController.h */,
 				1439EA95235891300030470A /* TLMenusTestController.m */,
-				1439EA92235887540030470A /* TLMenusController.xib */,
+				145EC500235960DD002A2217 /* TLLineLayout.h */,
+				145EC501235960DD002A2217 /* TLLineLayout.m */,
 			);
 			path = UIMenu;
 			sourceTree = "<group>";
@@ -345,7 +347,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1439EA882357FE0D0030470A /* TLCollectionCell.xib in Resources */,
 				1431D51B22E94E07008A7FBE /* Assets.xcassets in Resources */,
 				1439EA8D235803280030470A /* SFSymbolController.xib in Resources */,
 				143BF42022E0162C00753EF9 /* LaunchScreen.storyboard in Resources */,
@@ -377,6 +378,7 @@
 				14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */,
 				143BF41822E0162B00753EF9 /* ViewController.m in Sources */,
 				1439EA91235853EC0030470A /* TLMenusController.m in Sources */,
+				145EC502235960DD002A2217 /* TLLineLayout.m in Sources */,
 				1439EA872357FE0D0030470A /* TLCollectionCell.m in Sources */,
 				149F99C12356E8B900E719B2 /* TLScreenshotController.m in Sources */,
 				14F0CA9A22E1CC1B006A0783 /* UITabBar+TLAnimation.m in Sources */,

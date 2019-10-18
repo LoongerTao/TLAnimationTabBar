@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 UIKIT_EXTERN API_AVAILABLE(ios(13.0))
 @interface TLCollectionCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imgeView;
-@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) UIImageView *imageView;
+@property (weak, nonatomic) UILabel *textLabel;
 
 @end
 
