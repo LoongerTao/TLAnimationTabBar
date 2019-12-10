@@ -47,7 +47,7 @@ pod 'TLAnimationTabBar', '~> 1.0.3'
 - 动画实例需要遵守`TLAnimationProtocol协议`，根据协议定制动画，以保证调度统一。协议中将动画细化到`UITabBarButton`或者其subView（imageView和Label）
 
 3. 使用
-因为实在原生组件的基础上进行动画植入，所以只需要个每个UITabBarItem的实例赋予一个动画属性即可
+因为是在原生组件的基础上进行动画植入，所以只需要给每个UITabBarItem的实例赋予一个动画属性即可
 ```objc
     // 创建TabBarViewController的Child View Controller
     ViewController *vc = [[ViewController alloc] init];
