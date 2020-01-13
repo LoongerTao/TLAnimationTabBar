@@ -21,7 +21,9 @@
 		143BF42D22E0162C00753EF9 /* TabBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF42C22E0162C00753EF9 /* TabBarTests.m */; };
 		143BF43822E0162C00753EF9 /* TabBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF43722E0162C00753EF9 /* TabBarUITests.m */; };
 		143BF44722E0218200753EF9 /* TLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF44622E0218200753EF9 /* TLTabBarController.m */; };
+		143C2802235D3E6C00FDAC82 /* TLBarsAppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143C2800235D3E6C00FDAC82 /* TLBarsAppearanceController.m */; };
 		145EC502235960DD002A2217 /* TLLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 145EC501235960DD002A2217 /* TLLineLayout.m */; };
+		14681DC3236C0E2B000C1DDC /* TLTabBarAppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14681DC2236C0E2B000C1DDC /* TLTabBarAppearanceController.m */; };
 		149F99BC2356BE7600E719B2 /* NewFeaturesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F99BB2356BE7600E719B2 /* NewFeaturesController.m */; };
 		149F99C12356E8B900E719B2 /* TLScreenshotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F99BF2356E8B900E719B2 /* TLScreenshotController.m */; };
 		14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */; };
@@ -74,8 +76,12 @@
 		143BF43922E0162C00753EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		143BF44522E0218200753EF9 /* TLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTabBarController.h; sourceTree = "<group>"; };
 		143BF44622E0218200753EF9 /* TLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTabBarController.m; sourceTree = "<group>"; };
+		143C27FF235D3E6C00FDAC82 /* TLBarsAppearanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLBarsAppearanceController.h; sourceTree = "<group>"; };
+		143C2800235D3E6C00FDAC82 /* TLBarsAppearanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLBarsAppearanceController.m; sourceTree = "<group>"; };
 		145EC500235960DD002A2217 /* TLLineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLLineLayout.h; sourceTree = "<group>"; };
 		145EC501235960DD002A2217 /* TLLineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLLineLayout.m; sourceTree = "<group>"; };
+		14681DC1236C0E2B000C1DDC /* TLTabBarAppearanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTabBarAppearanceController.h; sourceTree = "<group>"; };
+		14681DC2236C0E2B000C1DDC /* TLTabBarAppearanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTabBarAppearanceController.m; sourceTree = "<group>"; };
 		149F99BA2356BE7600E719B2 /* NewFeaturesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewFeaturesController.h; sourceTree = "<group>"; };
 		149F99BB2356BE7600E719B2 /* NewFeaturesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewFeaturesController.m; sourceTree = "<group>"; };
 		149F99BE2356E8B900E719B2 /* TLScreenshotController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLScreenshotController.h; sourceTree = "<group>"; };
@@ -205,11 +211,23 @@
 			path = TabBarUITests;
 			sourceTree = "<group>";
 		};
+		143C27FE235D3DDC00FDAC82 /* Bars Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				143C27FF235D3E6C00FDAC82 /* TLBarsAppearanceController.h */,
+				143C2800235D3E6C00FDAC82 /* TLBarsAppearanceController.m */,
+				14681DC1236C0E2B000C1DDC /* TLTabBarAppearanceController.h */,
+				14681DC2236C0E2B000C1DDC /* TLTabBarAppearanceController.m */,
+			);
+			path = "Bars Appearance";
+			sourceTree = "<group>";
+		};
 		149F99B92356BDA600E719B2 /* iOS13 New Features */ = {
 			isa = PBXGroup;
 			children = (
-				1439EA8E235845D00030470A /* UIMenu */,
+				143C27FE235D3DDC00FDAC82 /* Bars Appearance */,
 				1439EA832357FDC50030470A /* Common */,
+				1439EA8E235845D00030470A /* UIMenu */,
 				1439EA782357F6020030470A /* SF Symbol */,
 				149F99BD2356E83B00E719B2 /* Screenshot */,
 				149F99BA2356BE7600E719B2 /* NewFeaturesController.h */,
@@ -376,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */,
+				143C2802235D3E6C00FDAC82 /* TLBarsAppearanceController.m in Sources */,
 				143BF41822E0162B00753EF9 /* ViewController.m in Sources */,
 				1439EA91235853EC0030470A /* TLMenusController.m in Sources */,
 				145EC502235960DD002A2217 /* TLLineLayout.m in Sources */,
@@ -383,6 +402,7 @@
 				149F99C12356E8B900E719B2 /* TLScreenshotController.m in Sources */,
 				14F0CA9A22E1CC1B006A0783 /* UITabBar+TLAnimation.m in Sources */,
 				143BF42322E0162C00753EF9 /* main.m in Sources */,
+				14681DC3236C0E2B000C1DDC /* TLTabBarAppearanceController.m in Sources */,
 				1439EA96235891300030470A /* TLMenusTestController.m in Sources */,
 				1439EA8C235803280030470A /* SFSymbolController.m in Sources */,
 				14F0CA9B22E1CC1B006A0783 /* TLTabBarAnimation.m in Sources */,

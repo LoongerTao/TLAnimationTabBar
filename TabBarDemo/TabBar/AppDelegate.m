@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TLTabBarController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     TLTabBarController *tb = [[TLTabBarController alloc] init];
+    tb.cls = [ViewController class];
     tb.view.bounds = [UIScreen mainScreen].bounds;
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

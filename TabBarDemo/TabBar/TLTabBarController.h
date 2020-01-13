@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TLTabBarController : UITabBarController
-
+// UIViewController class
+@property(nonatomic, strong) Class cls;
 @end
 
 NS_ASSUME_NONNULL_END

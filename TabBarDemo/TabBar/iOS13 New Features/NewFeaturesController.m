@@ -10,7 +10,7 @@
 #import "TLScreenshotController.h"
 #import "SFSymbolController.h"
 #import "TLMenusController.h"
-
+#import "TLBarsAppearanceController.h"
 
 @interface NewFeaturesController ()
 @property(nonatomic, strong) NSArray *items;
@@ -42,10 +42,10 @@
             @"title": @"Menus",
             @"cls": [TLMenusController class]
         },
-//        @{
-//            @"title": @"UITabBarAppearance",
-//            @"cls": [UIViewController class]
-//        },
+        @{
+            @"title": @"Bars Appearance",
+            @"cls": [TLBarsAppearanceController class]
+        }
     ];
 }
 
