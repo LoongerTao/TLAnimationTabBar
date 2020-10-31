@@ -26,7 +26,7 @@
 }
 
 - (void)didAddSubview:(UIView *)subview {
-    if ([self isMemberOfClass:[UITabBar class] ]) {
+    if ([self isMemberOfClass:[UITabBar class]]) {
         if (self.btns == nil) {
             self.btns = @[];
             self.selectedIndex = 0;
@@ -37,6 +37,7 @@
             NSMutableArray *temp = [NSMutableArray arrayWithArray:self.btns];
             [temp addObject:subview];
             self.btns = temp;
+            [self presetAnimationWithIndex:temp.count-1];
         }
     }
     
@@ -44,6 +45,21 @@
     SEL sel = NSSelectorFromString(@"tl_didAddSubview:");
     if([self respondsToSelector:sel]) {
         [self performSelector:sel withObject:subview afterDelay:0];
+    }
+}
+
+/// 预置动画(为满足要提前显示动画视图的情况)
+- (void)presetAnimationWithIndex:(NSInteger)idx {
+    if (self.items.count <= idx) return;
+       
+    SEL sel = @selector(presetAnimationWhitTabBarButton:buttonImageView:buttonTextLabel:isSelected:);
+    if ([self.items[idx].animation respondsToSelector:sel]) {
+        UIButton *btn = self.btns[idx];
+        BOOL isSelected = self.selectedIndex == idx;
+        [self.items[idx].animation presetAnimationWhitTabBarButton:btn
+                                                   buttonImageView:imageView(btn)
+                                                   buttonTextLabel:textLabel(btn)
+                                                        isSelected:isSelected];
     }
 }
 
@@ -132,11 +148,10 @@ UIImageView *imageView(UIView *btn) {
     }else if([btn isKindOfClass:NSClassFromString(@"UIButton")]) {
         return [(UIButton *)btn imageView];
     }
-    return nil; 
+    return nil;
 }
 
 @end
-
 
 
 

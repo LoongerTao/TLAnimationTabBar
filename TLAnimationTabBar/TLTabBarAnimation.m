@@ -17,7 +17,7 @@
 
 // MARK: - 功能函数
 /// 反转数组
-NSArray *reversedArray(NSArray *arr) {
+NSArray *tl_reversedArray(NSArray *arr) {
     NSMutableArray *temp = [NSMutableArray arrayWithCapacity:arr.count];
     for (NSInteger i = arr.count-1; i >= 0; i--) {
         [temp addObject:arr[i]];
@@ -26,7 +26,7 @@ NSArray *reversedArray(NSArray *arr) {
 }
 
 /// 创建CAKeyframeAnimation动画
-CAKeyframeAnimation * createAnimation(NSString *keyPath, NSArray *values, CGFloat duration) {
+CAKeyframeAnimation *tl_createAnimation(NSString *keyPath, NSArray *values, CGFloat duration) {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:keyPath];
     animation.values = values;
     animation.duration = kDuration;
@@ -36,8 +36,8 @@ CAKeyframeAnimation * createAnimation(NSString *keyPath, NSArray *values, CGFloa
 }
 
 /// 播放贞动画
-void playFrameAnimation(UIImageView *icon, NSArray <CIImage *>*images) {
-    CAKeyframeAnimation *animation = createAnimation(kAnimationKeyPathKeyFrame, images, kDuration);
+void tl_playFrameAnimation(UIImageView *icon, NSArray <CIImage *>*images) {
+    CAKeyframeAnimation *animation = tl_createAnimation(kAnimationKeyPathKeyFrame, images, kDuration);
     animation.calculationMode = @"discrete";
     animation.repeatCount = 1;
     animation.removedOnCompletion = NO;
@@ -46,7 +46,7 @@ void playFrameAnimation(UIImageView *icon, NSArray <CIImage *>*images) {
 }
 
 /// 植入烟花动画，并播放
-void playFireworksAnimation(UIView *view, UIImage *img, CGFloat scale, CGFloat scaleRange) {
+void tl_playFireworksAnimation(UIView *view, UIImage *img, CGFloat scale, CGFloat scaleRange) {
     BOOL __block clipsToBounds = view.clipsToBounds;
     view.clipsToBounds = NO;
     
@@ -133,12 +133,12 @@ void playFireworksAnimation(UIView *view, UIImage *img, CGFloat scale, CGFloat s
                             buttonImageView:(UIImageView *)imageView
                             buttonTextLabel:(UILabel *)textLabel
 {
-    CAKeyframeAnimation *bounceAnimation = createAnimation(kAnimationKeyPathScale, @[@1.0, @0.85, @1.15, @0.95, @1.02, @1.0], kDuration);
+    CAKeyframeAnimation *bounceAnimation = tl_createAnimation(kAnimationKeyPathScale, @[@1.0, @0.85, @1.15, @0.95, @1.02, @1.0], kDuration);
     [imageView.layer addAnimation:bounceAnimation forKey:nil];
     
     if(_isPlayFireworksAnimation) {
         UIImage *img = [UIImage imageNamed:@"yanhua"];
-        playFireworksAnimation(imageView, img, 0.08, 0.03);
+        tl_playFireworksAnimation(imageView, img, 0.08, 0.03);
     }
 }
 
@@ -175,7 +175,7 @@ void playFireworksAnimation(UIView *view, UIImage *img, CGFloat scale, CGFloat s
 
 void playMoveIconAnimation(UIImageView *icon, NSArray *values) {
     
-    CAKeyframeAnimation *animation = createAnimation(kAnimationKeyPathPositionY, values, kDuration / 2);
+    CAKeyframeAnimation *animation = tl_createAnimation(kAnimationKeyPathPositionY, values, kDuration / 2);
     animation.fillMode = kCAFillModeForwards;
     animation.removedOnCompletion = NO;
     
@@ -184,15 +184,15 @@ void playMoveIconAnimation(UIImageView *icon, NSArray *values) {
 
 void playSelectLabelAnimation(UILabel *textLabel) {
     
-    CAKeyframeAnimation *animation = createAnimation(kAnimationKeyPathPositionY, @[@(textLabel.center.y) , @(textLabel.center.y - 60.0)], kDuration);
+    CAKeyframeAnimation *animation = tl_createAnimation(kAnimationKeyPathPositionY, @[@(textLabel.center.y) , @(textLabel.center.y - 60.0)], kDuration);
     animation.fillMode = kCAFillModeRemoved;
     [textLabel.layer addAnimation:animation forKey:nil];
     
-    CAKeyframeAnimation *scaleAnimation = createAnimation(kAnimationKeyPathScale, @[@1.0, @2.0], kDuration);
+    CAKeyframeAnimation *scaleAnimation = tl_createAnimation(kAnimationKeyPathScale, @[@1.0, @2.0], kDuration);
     scaleAnimation.fillMode = kCAFillModeRemoved;
     [textLabel.layer addAnimation:scaleAnimation forKey:nil];
     
-    CAKeyframeAnimation * opacityAnimation = createAnimation(kAnimationKeyPathOpacity,@[@1.0, @0.0], kDuration);
+    CAKeyframeAnimation * opacityAnimation = tl_createAnimation(kAnimationKeyPathOpacity,@[@1.0, @0.0], kDuration);
     [textLabel.layer addAnimation:opacityAnimation forKey:nil];
     textLabel.alpha = 0;
 }
@@ -200,10 +200,10 @@ void playSelectLabelAnimation(UILabel *textLabel) {
 
 void playDeselectLabelAnimation(UILabel *textLabel) {
     
-    CAKeyframeAnimation *animation = createAnimation(kAnimationKeyPathPositionY, @[@(textLabel.center.y + 15), @(textLabel.center.y)], kDuration);
+    CAKeyframeAnimation *animation = tl_createAnimation(kAnimationKeyPathPositionY, @[@(textLabel.center.y + 15), @(textLabel.center.y)], kDuration);
     [textLabel.layer addAnimation:animation forKey:nil];
     
-    CAKeyframeAnimation * opacityAnimation = createAnimation(kAnimationKeyPathOpacity,@[@0.0, @1.0], kDuration);
+    CAKeyframeAnimation * opacityAnimation = tl_createAnimation(kAnimationKeyPathOpacity,@[@0.0, @1.0], kDuration);
     [textLabel.layer addAnimation:opacityAnimation forKey:nil];
     textLabel.alpha = 1;
 }
@@ -246,10 +246,10 @@ void playDeselectLabelAnimation(UILabel *textLabel) {
                             buttonTextLabel:(UILabel *)textLabel
 {
     if (self.images.count > 0) {
-        playFrameAnimation(imageView, self.images);
+        tl_playFrameAnimation(imageView, self.images);
         if(_isPlayFireworksAnimation) {
             UIImage *img = [UIImage imageNamed:@"yanhua"];
-            playFireworksAnimation(imageView, img, 0.08, 0.03);
+            tl_playFireworksAnimation(imageView, img, 0.08, 0.03);
         }
     }
 }
@@ -260,7 +260,7 @@ void playDeselectLabelAnimation(UILabel *textLabel) {
                               buttonTextLabel:(UILabel *)textLabel
 {
     if (self.images.count > 0) {
-        playFrameAnimation(imageView, reversedArray(self.images));
+        tl_playFrameAnimation(imageView, tl_reversedArray(self.images));
     }
 }
 

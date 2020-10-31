@@ -152,7 +152,6 @@
 // MARK: - Tab Bar Appearance
 - (void)setTabBarAppearanceWithColor:(UIColor *)color {
     TLTabBarController *tabBarVc = [TLTabBarController new];
-    tabBarVc.cls = [TLTabBarAppearanceController class];
     tabBarVc.view.bounds = [UIScreen mainScreen].bounds;
     
     UIColor *selectColor = [UIColor systemPinkColor];

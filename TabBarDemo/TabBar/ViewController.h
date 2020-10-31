@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
-
+/// 是否是Lottie动画
+@property(nonatomic, assign) BOOL isLottie;
+/// 对tab bar item 动画的简单描述
+@property(nonatomic, copy) NSString *desc;
 @end
 

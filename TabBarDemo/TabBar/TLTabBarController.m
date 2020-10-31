@@ -9,6 +9,7 @@
 #import "TLTabBarController.h"
 #import "ViewController.h"
 #import "TLAnimationTabBar.h"
+#import "TLTabBarLottieAnimation.h"
 
 @interface TLTabBarController ()
 
@@ -18,16 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)setCls:(Class)cls {
-    _cls = cls;
+//    [self addChildViewController:childViewController2(UITabBarSystemItemDownloads, 0)];
+//    [self addChildViewController:childViewController2(UITabBarSystemItemFavorites, 1)];
+//    [self addChildViewController:childViewController2(UITabBarSystemItemBookmarks, 2)];
     
-    [self addChildViewController:childViewController(@"Pin", @"icon_pin_00160", 0, cls)];
-    [self addChildViewController:childViewController(@"User", @"user_00084", 1, cls)];
-    [self addChildViewController:childViewController2(UITabBarSystemItemBookmarks, 2, cls)];
-    [self addChildViewController:childViewController(@"Drop", @"drop", 3, cls)];
-    [self addChildViewController:childViewController(@"Tools", @"Tools_00028", 4, cls)];
+    [self addChildViewController:childViewController(@"Pin", @"icon_pin_00160", 0)];
+    [self addChildViewController:childViewController(@"User", @"user_00084", 1)];
+    [self addChildViewController:childViewController2(UITabBarSystemItemBookmarks, 2)];
+    [self addChildViewController:childViewController(@"Drop", @"drop", 3)];
+    [self addChildViewController:childViewController(@"Tools", @"Tools_00028", 4)];
     
     self.tabBar.tintColor = [UIColor colorWithRed:234/255.0 green:111/255.0 blue:90/255.0 alpha:1];
     if (@available(iOS 10.0, *)) {
@@ -39,8 +39,8 @@
 
 // MARK: - UITabBarItem创建函数
 /// 自定义样式UITabBarItem
-UIViewController *childViewController (NSString *title, NSString *imgName, NSUInteger tag, Class cls) {
-    ViewController *vc = [[cls alloc] init];
+UIViewController *childViewController (NSString *title, NSString *imgName, NSUInteger tag) {
+    ViewController *vc = [[ViewController alloc] init];
     vc.view.backgroundColor = [UIColor whiteColor];
     vc.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:[UIImage imageNamed:imgName] tag:tag];
     
@@ -49,23 +49,22 @@ UIViewController *childViewController (NSString *title, NSString *imgName, NSUIn
 }
 
 /// 系统样式UITabBarItem
-UIViewController *childViewController2 (UITabBarSystemItem systemItem, NSUInteger tag, Class cls) {
-    ViewController *vc = [[cls alloc] init];
+UIViewController *childViewController2 (UITabBarSystemItem systemItem, NSUInteger tag) {
+    ViewController *vc = [[ViewController alloc] init];
     vc.view.backgroundColor = [UIColor whiteColor];
     vc.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:systemItem tag:tag];
     
     setAnimation(vc.tabBarItem, tag);
-    
     return vc;
 }
 
 // MARK: - 给UITabBarItem绑定动画
 /// 给UITabBarItem绑定动画
 void setAnimation(UITabBarItem *item, NSInteger index) {
-     item.animation = @[
-                       bounceAnimation(), rotationAnimation(), transitionAniamtion(),
-                       fumeAnimation(), frameAnimation()
-                       ][index];
+    item.animation = @[
+        bounceAnimation(), rotationAnimation(), transitionAniamtion(),
+        fumeAnimation(), frameAnimation()
+    ][index];
 }
 
 
@@ -116,7 +115,6 @@ NSArray *imgs (){
     NSLog(@"%s",__func__);
 }
 @end
-
 
 
 

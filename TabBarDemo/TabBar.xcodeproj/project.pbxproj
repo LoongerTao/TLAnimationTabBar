@@ -14,6 +14,7 @@
 		1439EA91235853EC0030470A /* TLMenusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439EA90235853EC0030470A /* TLMenusController.m */; };
 		1439EA93235887540030470A /* TLMenusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1439EA92235887540030470A /* TLMenusController.xib */; };
 		1439EA96235891300030470A /* TLMenusTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1439EA95235891300030470A /* TLMenusTestController.m */; };
+		143AA755254D16CA001553EB /* 5dark.json in Resources */ = {isa = PBXBuildFile; fileRef = 143AA754254D16C9001553EB /* 5dark.json */; };
 		143BF41522E0162B00753EF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF41422E0162B00753EF9 /* AppDelegate.m */; };
 		143BF41822E0162B00753EF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143BF41722E0162B00753EF9 /* ViewController.m */; };
 		143BF42022E0162C00753EF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143BF41E22E0162C00753EF9 /* LaunchScreen.storyboard */; };
@@ -26,9 +27,19 @@
 		14681DC3236C0E2B000C1DDC /* TLTabBarAppearanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14681DC2236C0E2B000C1DDC /* TLTabBarAppearanceController.m */; };
 		149F99BC2356BE7600E719B2 /* NewFeaturesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F99BB2356BE7600E719B2 /* NewFeaturesController.m */; };
 		149F99C12356E8B900E719B2 /* TLScreenshotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149F99BF2356E8B900E719B2 /* TLScreenshotController.m */; };
+		14E02B4F254BB90F00B697FB /* TLTabBarLottieAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E02B4E254BB90F00B697FB /* TLTabBarLottieAnimation.m */; };
+		14E02B52254BB96F00B697FB /* TLLottieAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E02B51254BB96F00B697FB /* TLLottieAnimationView.m */; };
+		14E02B57254BC2A700B697FB /* 4.json in Resources */ = {isa = PBXBuildFile; fileRef = 14E02B54254BC2A700B697FB /* 4.json */; };
+		14E02B58254BC2A700B697FB /* 3.json in Resources */ = {isa = PBXBuildFile; fileRef = 14E02B55254BC2A700B697FB /* 3.json */; };
+		14E02B59254BC2A700B697FB /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = 14E02B56254BC2A700B697FB /* 1.json */; };
+		14E02B5B254BC2B700B697FB /* 5.json in Resources */ = {isa = PBXBuildFile; fileRef = 14E02B5A254BC2B700B697FB /* 5.json */; };
+		14E02B5E254BC5B700B697FB /* UIImage+TLExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E02B5D254BC5B700B697FB /* UIImage+TLExt.m */; };
+		14E02B62254BEE4300B697FB /* TLLottieTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E02B60254BE86300B697FB /* TLLottieTabBarController.m */; };
+		14E02B64254C0B2E00B697FB /* 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 14E02B63254C0B2D00B697FB /* 2.json */; };
 		14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */; };
 		14F0CA9A22E1CC1B006A0783 /* UITabBar+TLAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9422E1CC1B006A0783 /* UITabBar+TLAnimation.m */; };
 		14F0CA9B22E1CC1B006A0783 /* TLTabBarAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F0CA9822E1CC1B006A0783 /* TLTabBarAnimation.m */; };
+		FB3831325EE73EA07ED2D00C /* libPods-TabBar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E3651DE118E85230C4CDB00 /* libPods-TabBar.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +71,7 @@
 		1439EA92235887540030470A /* TLMenusController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TLMenusController.xib; sourceTree = "<group>"; };
 		1439EA94235891300030470A /* TLMenusTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLMenusTestController.h; sourceTree = "<group>"; };
 		1439EA95235891300030470A /* TLMenusTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLMenusTestController.m; sourceTree = "<group>"; };
+		143AA754254D16C9001553EB /* 5dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 5dark.json; sourceTree = "<group>"; };
 		143BF41022E0162B00753EF9 /* TabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		143BF41322E0162B00753EF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		143BF41422E0162B00753EF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,6 +98,19 @@
 		149F99BB2356BE7600E719B2 /* NewFeaturesController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewFeaturesController.m; sourceTree = "<group>"; };
 		149F99BE2356E8B900E719B2 /* TLScreenshotController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLScreenshotController.h; sourceTree = "<group>"; };
 		149F99BF2356E8B900E719B2 /* TLScreenshotController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLScreenshotController.m; sourceTree = "<group>"; };
+		14E02B4D254BB90F00B697FB /* TLTabBarLottieAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTabBarLottieAnimation.h; sourceTree = "<group>"; };
+		14E02B4E254BB90F00B697FB /* TLTabBarLottieAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTabBarLottieAnimation.m; sourceTree = "<group>"; };
+		14E02B50254BB96F00B697FB /* TLLottieAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLLottieAnimationView.h; sourceTree = "<group>"; };
+		14E02B51254BB96F00B697FB /* TLLottieAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLLottieAnimationView.m; sourceTree = "<group>"; };
+		14E02B54254BC2A700B697FB /* 4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 4.json; sourceTree = "<group>"; };
+		14E02B55254BC2A700B697FB /* 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 3.json; sourceTree = "<group>"; };
+		14E02B56254BC2A700B697FB /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1.json; sourceTree = "<group>"; };
+		14E02B5A254BC2B700B697FB /* 5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 5.json; sourceTree = "<group>"; };
+		14E02B5C254BC5B700B697FB /* UIImage+TLExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+TLExt.h"; sourceTree = "<group>"; };
+		14E02B5D254BC5B700B697FB /* UIImage+TLExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TLExt.m"; sourceTree = "<group>"; };
+		14E02B5F254BE86300B697FB /* TLLottieTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLLottieTabBarController.h; sourceTree = "<group>"; };
+		14E02B60254BE86300B697FB /* TLLottieTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLLottieTabBarController.m; sourceTree = "<group>"; };
+		14E02B63254C0B2D00B697FB /* 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 2.json; sourceTree = "<group>"; };
 		14F0CA9122E1CC1B006A0783 /* TLAnimationTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLAnimationTabBar.h; sourceTree = "<group>"; };
 		14F0CA9222E1CC1B006A0783 /* TLAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLAnimationProtocol.h; sourceTree = "<group>"; };
 		14F0CA9322E1CC1B006A0783 /* UITabBarItem+TLAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarItem+TLAnimation.m"; sourceTree = "<group>"; };
@@ -94,6 +119,9 @@
 		14F0CA9622E1CC1B006A0783 /* UITabBarItem+TLAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarItem+TLAnimation.h"; sourceTree = "<group>"; };
 		14F0CA9722E1CC1B006A0783 /* UITabBar+TLAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+TLAnimation.h"; sourceTree = "<group>"; };
 		14F0CA9822E1CC1B006A0783 /* TLTabBarAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTabBarAnimation.m; sourceTree = "<group>"; };
+		4E3651DE118E85230C4CDB00 /* libPods-TabBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TabBar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D88B5A8071E374D152DA1CC /* Pods-TabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBar.release.xcconfig"; path = "Target Support Files/Pods-TabBar/Pods-TabBar.release.xcconfig"; sourceTree = "<group>"; };
+		D25A42B6BDB546170852E5B1 /* Pods-TabBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabBar.debug.xcconfig"; path = "Target Support Files/Pods-TabBar/Pods-TabBar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB3831325EE73EA07ED2D00C /* libPods-TabBar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +191,8 @@
 				143BF42B22E0162C00753EF9 /* TabBarTests */,
 				143BF43622E0162C00753EF9 /* TabBarUITests */,
 				143BF41122E0162B00753EF9 /* Products */,
+				FBBA4E170DEE6369208EDE4C /* Pods */,
+				FEF86637707F6CAC95297B48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,6 +209,7 @@
 		143BF41222E0162B00753EF9 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				14E02B4C254BB8DF00B697FB /* Lottie */,
 				149F99B92356BDA600E719B2 /* iOS13 New Features */,
 				143BF41322E0162B00753EF9 /* AppDelegate.h */,
 				143BF41422E0162B00753EF9 /* AppDelegate.m */,
@@ -189,6 +221,8 @@
 				143BF41E22E0162C00753EF9 /* LaunchScreen.storyboard */,
 				143BF42122E0162C00753EF9 /* Info.plist */,
 				143BF42222E0162C00753EF9 /* main.m */,
+				14E02B5C254BC5B700B697FB /* UIImage+TLExt.h */,
+				14E02B5D254BC5B700B697FB /* UIImage+TLExt.m */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -245,6 +279,33 @@
 			path = Screenshot;
 			sourceTree = "<group>";
 		};
+		14E02B4C254BB8DF00B697FB /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				14E02B53254BC27700B697FB /* Source */,
+				14E02B4D254BB90F00B697FB /* TLTabBarLottieAnimation.h */,
+				14E02B4E254BB90F00B697FB /* TLTabBarLottieAnimation.m */,
+				14E02B50254BB96F00B697FB /* TLLottieAnimationView.h */,
+				14E02B51254BB96F00B697FB /* TLLottieAnimationView.m */,
+				14E02B5F254BE86300B697FB /* TLLottieTabBarController.h */,
+				14E02B60254BE86300B697FB /* TLLottieTabBarController.m */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		14E02B53254BC27700B697FB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				14E02B63254C0B2D00B697FB /* 2.json */,
+				14E02B5A254BC2B700B697FB /* 5.json */,
+				143AA754254D16C9001553EB /* 5dark.json */,
+				14E02B54254BC2A700B697FB /* 4.json */,
+				14E02B55254BC2A700B697FB /* 3.json */,
+				14E02B56254BC2A700B697FB /* 1.json */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		14F0CA9022E1CC1B006A0783 /* TLAnimationTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +322,23 @@
 			path = ../TLAnimationTabBar;
 			sourceTree = "<group>";
 		};
+		FBBA4E170DEE6369208EDE4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D25A42B6BDB546170852E5B1 /* Pods-TabBar.debug.xcconfig */,
+				5D88B5A8071E374D152DA1CC /* Pods-TabBar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FEF86637707F6CAC95297B48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E3651DE118E85230C4CDB00 /* libPods-TabBar.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +346,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 143BF43C22E0162C00753EF9 /* Build configuration list for PBXNativeTarget "TabBar" */;
 			buildPhases = (
+				1B423EF770F94C75C9C1996A /* [CP] Check Pods Manifest.lock */,
 				143BF40C22E0162B00753EF9 /* Sources */,
 				143BF40D22E0162B00753EF9 /* Frameworks */,
 				143BF40E22E0162B00753EF9 /* Resources */,
@@ -366,7 +445,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1431D51B22E94E07008A7FBE /* Assets.xcassets in Resources */,
+				14E02B58254BC2A700B697FB /* 3.json in Resources */,
+				14E02B64254C0B2E00B697FB /* 2.json in Resources */,
+				14E02B59254BC2A700B697FB /* 1.json in Resources */,
+				14E02B57254BC2A700B697FB /* 4.json in Resources */,
 				1439EA8D235803280030470A /* SFSymbolController.xib in Resources */,
+				14E02B5B254BC2B700B697FB /* 5.json in Resources */,
+				143AA755254D16CA001553EB /* 5dark.json in Resources */,
 				143BF42022E0162C00753EF9 /* LaunchScreen.storyboard in Resources */,
 				1439EA93235887540030470A /* TLMenusController.xib in Resources */,
 			);
@@ -388,18 +473,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B423EF770F94C75C9C1996A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TabBar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		143BF40C22E0162B00753EF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				14F0CA9922E1CC1B006A0783 /* UITabBarItem+TLAnimation.m in Sources */,
+				14E02B4F254BB90F00B697FB /* TLTabBarLottieAnimation.m in Sources */,
+				14E02B52254BB96F00B697FB /* TLLottieAnimationView.m in Sources */,
+				14E02B5E254BC5B700B697FB /* UIImage+TLExt.m in Sources */,
 				143C2802235D3E6C00FDAC82 /* TLBarsAppearanceController.m in Sources */,
 				143BF41822E0162B00753EF9 /* ViewController.m in Sources */,
 				1439EA91235853EC0030470A /* TLMenusController.m in Sources */,
 				145EC502235960DD002A2217 /* TLLineLayout.m in Sources */,
 				1439EA872357FE0D0030470A /* TLCollectionCell.m in Sources */,
 				149F99C12356E8B900E719B2 /* TLScreenshotController.m in Sources */,
+				14E02B62254BEE4300B697FB /* TLLottieTabBarController.m in Sources */,
 				14F0CA9A22E1CC1B006A0783 /* UITabBar+TLAnimation.m in Sources */,
 				143BF42322E0162C00753EF9 /* main.m in Sources */,
 				14681DC3236C0E2B000C1DDC /* TLTabBarAppearanceController.m in Sources */,
@@ -569,6 +683,7 @@
 		};
 		143BF43D22E0162C00753EF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D25A42B6BDB546170852E5B1 /* Pods-TabBar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -587,6 +702,7 @@
 		};
 		143BF43E22E0162C00753EF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D88B5A8071E374D152DA1CC /* Pods-TabBar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
